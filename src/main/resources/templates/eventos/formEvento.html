@@ -15,22 +15,22 @@
 	<div class="container">
 		<h1>Adicionar evento</h1>
 
-		<form action="/eventos" method="POST">
+		<form action="/eventos" method="POST" th:object="${evento}">
 			<div>
 				<label>Nome do evento:</label>
-				<input type="text" name="nome" />
+				<input type="text" name="nome" th:field="*{nome}" />
 			</div>
 			<div>
 				<label>Local do evento:</label>
-				<input type="text" name="local" />
+				<input type="text" name="local" th:field="*{local}"/>
 			</div>
 			<div>
 				<label>Data do evento:</label>
-				<input type="text" name="data" />
+				<input type="text" name="data" th:field="*{data}"/>
 			</div>
 			<div>
 				<label>Horario do evento:</label>
-				<input type="text" name="horario" />
+				<input type="text" name="horario" th:field="*{horario}"/>
 			</div>
 			<div>
 				<button type="submit" class="waves-effect waves-light btn">Salvar</button>
