@@ -5,14 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @Entity //vai criar tabela
-
+@Data
 public class Evento {
-	@Getter
-	@Setter
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //gerar id automatico
